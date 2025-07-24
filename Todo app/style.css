@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background: rgba(128, 128, 128, 0.452); */
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 45px;
+    color: rgba(0, 255, 255, 0.814);
+    font-weight: 700;
+
+    text-shadow: 0px 0px 6px black;
+}
+
+.container-fluid {
+    height: 90vh;
+    width: 80%;
+
+    margin: auto;
+    background-color: rgba(128, 128, 128, 0.501);
+
+    position: relative;
+    top: 20px;
+
+    /* color: white; */
+
+    box-shadow: 0px 0px 8px black;
+    overflow: hidden;
+}
+
+.container-fluid h1 i {
+    position: relative;
+    right: 20px;
+    color: aqua;
+}
+
+.main-list {
+   height: 90%;
+   width: 100%;
+}
+
+.add-task {
+    height: 200px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 20px;
+
+    gap: 20px;
+
+    border-bottom: 1px solid;
+}
+
+.add-task input {
+    height: 40px;
+    width: 35%;
+
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 9px;
+
+    text-align: center;
+}
+
+.add-task input:active , :focus {
+    border: none;
+    box-shadow: 0px 0px 6px white;
+    outline: 3px solid blue;
+}
+
+.add-task .btn {
+    height: 40px;
+    width: 100px;
+
+    border-radius: 12px;
+    color: white;
+    background-color: blue;
+    border: none;
+}
+
+
+/* section */
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    height: 350px;
+    width: 100%;
+}
+
+.section i {
+    position: relative;
+    right: 10px;
+    transform: scale(1.1);
+}
+
+@media (max-width: 495px) {
+    .section {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+    .section ul {
+        width: 90%;
+    }
+    .add-task input {
+        font-size: 13px;
+    }
+}
+
+.tasks {
+    border: 1px solid white; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.tasks h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.tasks ul {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: hidden;
+    
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.comp-task {
+    border: 1px solid white; 
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+}
+
+.comp-task h3 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.comp-task ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: hidden;
+
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
