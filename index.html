@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiCalci.io</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <script>
+         tailwind.config = {
+            theme: {
+                extend: {
+                    screens: {
+                        '3xs': '250px',
+                        '2xs': '300px',
+                        'xs' : '400px',
+                        'sm-x': '500px',
+                        'md-2': '900px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script src="app.js"></script>
+
+</head>
+<body class="min-h-screen m-0 p-0 bg-gray-300 flex flex-col justify-between">
+    <!--Note: mobile first responsive project-->
+    <!--Goal: Achieve responsive multimedia ron's calci.io project-->
+
+    <header>
+        <!-- navbar -->
+        <div class="h-16 md:h-20 w-full px-3 py-2 bg-black text-white flex justify-between items-center">  
+
+            <img class="h-[50px] w-[95px] md:h-[65px] md:w-[115px] md:ml-4 lg:ml-6 opacity-90 shadow-2xl rounded-full shadow-amber-50 hover:scale-[1.04]" src="logo3.png" alt="">
+
+            <!--navbar ul-->
+            <ul class="hidden sm-x:flex gap-4 sm:gap-6 md:gap-10 sm:mr-2 lg:mr-6 lg:gap-12 xl:mr-10">
+                <li class="sm:text-lg lg:text-xl xl:font-semibold">
+                    <i class="fa-regular fa-house mr-1 text-white/80 hover:text-white hover:scale-[1.04] cursor-pointer md:hover:scale-[1.1]"></i>
+
+                    <span class="inline-block transition-all delay-75 duration-200 ease-in hover:translate-y-[-3px] hover:underline decoration-0 lg:decoration-1 decoration-gray-400 hover:text-gray-500">
+                        <a href="#">
+                            Home
+                        </a>
+                    </span>
+                </li>
+                <li class="sm:text-lg lg:text-xl xl:font-semibold">
+                    <i class="fa-regular fa-circle-user mr-1 text-white/80 hover:text-white hover:scale-[1.04] cursor-pointer md:hover:scale-[1.1]"></i>
+
+                    <span class="inline-block transition-all delay-75 duration-200 ease-in hover:translate-y-[-3px] hover:underline decoration-0 lg:decoration-1 decoration-gray-400 hover:text-gray-500">
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\apna college dev\Tailwaind css\practice\portfolio-1\index.html">
+                            About
+                        </a>
+                    </span>
+                </li>
+                <li class="sm:text-lg lg:text-xl xl:font-semibold">
+                    <i class="fa-regular fa-envelope mr-1 text-white/80 hover:text-white hover:scale-[1.04] cursor-pointer md:hover:scale-[1.1]"></i>
+
+                    <span class="inline-block transition-all delay-75 duration-200 ease-in hover:translate-y-[-3px] hover:underline decoration-0 lg:decoration-1 decoration-gray-400 hover:text-gray-500">
+                        <a href="#">
+                            Contact
+                        </a>
+                    </span>
+                </li>
+            </ul>
+
+            <!--hamburger for min screens-->
+            <i id="bar" class="fa-solid fa-bars text-white/80 scale-[1.4] mr-2 hover:scale-[1.5] cursor-pointer sm-x:hidden"></i>
+        </div>
+
+        <!--navbar for small screens-->
+        <div id="sdBar" class="hidden h-[70px] w-full bg-gray-700 p-1 shadow-lg shadow-black/10 absolute">  
+
+            <ul class="flex flex-wrap gap-1 justify-evenly items-center text-white text-base font-semibold -tracking-normal h-full">
+                <li class="s-li">
+                    <i class="fa-regular fa-house mr-1 text-white/80 hover:text-white hover:scale-[1.04] cursor-pointer"></i>
+
+                    <span class="inline-block transition-all delay-75 duration-200 ease-in hover:translate-y-[-5px] hover:underline decoration-white/70 hover:text-white/70">
+                        <a href="#">
+                            Home
+                        </a>
+                    </span>
+                </li>
+                <li class="s-li">
+                    <i class="fa-regular fa-circle-user mr-1 text-white/80 hover:text-white hover:scale-[1.04] cursor-pointer"></i>
+
+                    <span class="inline-block transition-all delay-75 duration-200 ease-in hover:translate-y-[-5px] hover:underline decoration-white/70 hover:text-white/70">
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\apna college dev\Tailwaind css\practice\portfolio-1\index.html">
+                            About
+                        </a>
+                    </span>
+                </li>
+                <li class="s-li">
+                    <i class="fa-regular fa-envelope mr-1 text-white/80 hover:text-white hover:scale-[1.04] cursor-pointer"></i>
+
+                    <span class="inline-block transition-all delay-75 duration-200 ease-in hover:translate-y-[-5px] hover:underline decoration-white/70 hover:text-white/70">
+                        <a href="#">
+                            Contact
+                        </a>
+                    </span>
+                </li>
+                <!-- <li><a href="#">Multi-Media</a></li> -->
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+        
+        <!-- hero-sec-1  -->
+        <div class="my-[75px] flex flex-col gap-3 bg-amber-100 w-[95%] xs:w-[90%] sm-x:w-[80%] mx-auto p-2 rounded-2xl py-5 md:py-7 lg:py-12
+        hover:shadow-lg hover:shadow-amber-300/30">
+            <h1 class="m-auto p-1 text-base 2xs:text-xl sm-x:text-2xl md:text-3xl lg:text-4xl xs:font-bold font-semibold text-violet-600">
+                Welcome to Ron's Calci.io Page
+            </h1>
+            <h2 class="m-auto py-2 px-3 text-center md:text-lg lg:text-xl text-gray-600 bg-cyan-400/60 rounded-full text-base font-semibold">
+                Here we provide several types of <br> 
+                calculators & converters 
+            </h2>
+        </div>
+
+
+        <!-- dropdown to toggle between calcies -->
+        <div class="p-3 relative">
+            <div id="drop" class="flex justify-center items-center mx-auto py-2 px-2 w-[80%] sm-x:w-[65%]
+            md:w-[55%] md-2:w-[45%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] bg-white/60 rounded-xl cursor-pointer">
+                <h1 class="text-lg font-semibold mx-6">
+                    Basic calculator
+                </h1>
+                <i class="fa-solid fa-caret-down scale-[1.1] cursor-pointer p-1"></i>
+            </div>
+           
+            <div id="dropdown" class="hidden absolute left-1/2 transform top-full -translate-x-1/2 mt-0 w-[75%] sm-x:w-[55%] md:w-[50%] md-2:w-[43%] lg:w-[38%] xl:w-[32%] 2xl:w-[27%]">
+
+                <ul class="flex flex-col gap-4 bg-white/50 p-2 text-sm rounded-md">
+
+                    <li class="drop-li m-auto border-b-2 text-base font-semibold text-gray-700 transition-all delay-75 duration-300 ease-in hover:translate-y-[-5px] hover:underline hover:text-gray-500 tracking-wide hover:bg-black w-full p-1 cursor-pointer">
+                       
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\JS mini Projects\scientific calculator\index.html" class="flex justify-self-center">
+                            Scientific Calculator
+                        </a>
+                    </li>
+                    <li class="drop-li border-b-2 text-base font-semibold text-gray-700 transition-all delay-75 duration-300 ease-in hover:translate-y-[-5px] hover:underline hover:text-gray-500 tracking-wide hover:bg-black w-full p-1 cursor-pointer">
+                        
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\JS mini Projects\Age calculator\index.html" class="flex justify-self-center">
+                            Age Calculator
+                        </a>
+                    </li>
+                    <li class="drop-li m-auto border-b-2 text-base font-semibold text-gray-700 transition-all delay-75 duration-300 ease-in hover:translate-y-[-5px] hover:underline hover:text-gray-500 tracking-wide hover:bg-black w-full p-1 cursor-pointer">
+                       
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\JS mini Projects\calculator\index.html" class="flex justify-self-center">
+                            Arithmatic Calculator
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- calci in main page -->
+         <div class="mt-5 mb-5">
+            <iframe class="mx-auto my-2 md:my-4 h-[400px] sm:h-[540px] sm:w-[50%] md:w-[45%] md-2:w-[40%] lg:w-[32%] 2xl:h-[520px] 2xl:w-[21%] sm:rounded-sm  p-0 bg-white" src="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\Major Projects\improve-project\calculator\index.html" frameborder="0"></iframe>
+         </div>
+
+    </main>
+
+    <footer>
+        <div class="flex flex-col sm:flex-row sm:p-8 flex-1 w-full p-2 bg-black/80 mt-2 gap-6">
+            
+            <!-- foot-col-1 -->
+            <div class="mx-auto my-2">
+                <div class="inline-flex gap-1 items-center mb-2 bg-black/30 py-2 px-6">
+                    <i class="fa-solid fa-calculator text-white mt-1 mr-1"></i>
+                        <h1 class="text-white text-xl tracking-wider font-bold underline decoration-white">
+                            Calculator's
+                        </h1>
+                </div>
+                
+                <ul class="flex flex-col gap-3 text-white/90 text-[18px] ml-2 mt-2">
+                    <li class="group">
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\JS mini Projects\calculator\index.html" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            # Arithmatic calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\JS mini Projects\scientific calculator\index.html" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            # Scientific calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\JS mini Projects\Age calculator\index.html" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            # Age calculator
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            # Money converter
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- foot-col-2 -->
+            <div class="mx-auto my-2">
+                <div class="inline-flex gap-1 items-center mb-2 bg-black/30 py-2 px-4">
+                    <i class="fa-solid fa-globe text-white mr-1 mt-1"></i>
+                    <h1 class="text-white text-xl tracking-wider font-bold underline decoration-white">
+                        Connect With Us
+                    </h1>
+                </div>
+                
+                <ul class="flex flex-col gap-3 text-white/90 text-[18px] ml-5 mt-2">
+                    <li class="group inline-block">
+                        <i class="fa-brands fa-github text-white/80 hover:text-white hover:scale-[1.1] mr-1"></i>
+                        <a href="https://github.com/RonTheCoder50" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            GitHub
+                        </a>
+                    </li>
+
+                    <li class="group">
+                        <i class="fa-brands fa-linkedin text-white/80 hover:text-white hover:scale-[1.1] mr-1"></i>
+                        <a href="#" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            Linkedin
+                        </a>
+                    </li>
+
+                    <li class="group">
+                        <i class="fa-brands fa-facebook text-white text-white/80 hover:text-white hover:scale-[1.1] mr-1"></i>
+                        <a href="#" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            Facebook
+                        </a>
+                    </li>
+
+                    <li class="group">
+                        <i class="fa-brands fa-youtube text-white text-white/80 hover:text-white hover:scale-[1.1] mr-1"></i>
+                        <a href="#" class="group-hover:underline decoration-0 hover:text-blue-600/80">
+                            Youtube
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+
+    
+</body>
+</html>
