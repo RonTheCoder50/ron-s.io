@@ -29,15 +29,17 @@
     <script src="app.js"></script>
 
 </head>
-<body class="min-h-screen m-0 p-0 bg-gray-300 flex flex-col justify-between">
+<body class="min-h-screen m-0 p-0 bg-gray-300 flex flex-col justify-between dark_ isDark">
     <!--Note: mobile first responsive project-->
     <!--Goal: Achieve responsive multimedia ron's calci.io project-->
 
+    <!-- for dark mode i use dark_ class-->
+
     <header>
         <!-- navbar -->
-        <div class="h-16 md:h-20 w-full px-3 py-2 bg-black text-white flex justify-between items-center">  
+        <div id="nav" class="h-16 md:h-20 w-full px-3 py-2 bg-black text-white flex justify-between items-center">  
 
-            <img class="h-[50px] w-[95px] md:h-[65px] md:w-[115px] md:ml-4 lg:ml-6 opacity-90 shadow-2xl rounded-full shadow-amber-50 hover:scale-[1.04]" src="logo3.png" alt="">
+            <img id="imgg" class="h-[50px] w-[95px] md:h-[65px] md:w-[115px] md:ml-4 lg:ml-6 opacity-90 shadow-2xl rounded-full shadow-amber-50 hover:scale-[1.04]" src="logo3.png" alt="">
 
             <!--navbar ul-->
             <ul class="hidden sm-x:flex gap-4 sm:gap-6 md:gap-10 sm:mr-2 lg:mr-6 lg:gap-12 xl:mr-10">
@@ -67,6 +69,9 @@
                             Contact
                         </a>
                     </span>
+
+                    <!--dark toggler-->
+                    <i id="drk" class="fa-regular fa-moon text-white scale-[1.3] ml-4 cursor-pointer hover:scale-[1.4] hover:text-gray-300"></i>
                 </li>
             </ul>
 
@@ -105,7 +110,10 @@
                         </a>
                     </span>
                 </li>
-                <!-- <li><a href="#">Multi-Media</a></li> -->
+
+                <li>
+                    <i id="drk" class="fa-regular fa-moon text-white scale-[1.3] ml-4 cursor-pointer hover:scale-[1.4] hover:text-gray-300"></i>
+                </li>
             </ul>
         </div>
     </header>
@@ -114,22 +122,24 @@
     <main>
         
         <!-- hero-sec-1  -->
-        <div class="my-[75px] flex flex-col gap-3 bg-amber-100 w-[95%] xs:w-[90%] sm-x:w-[80%] mx-auto p-2 rounded-2xl py-5 md:py-7 lg:py-12
-        hover:shadow-lg hover:shadow-amber-300/30">
+        <div id="hro" class="my-[75px] flex flex-col gap-3 bg-amber-100 w-[95%] xs:w-[90%] sm-x:w-[80%] mx-auto p-2 rounded-2xl py-5 md:py-7 lg:py-12
+        hover:shadow-lg hover:shadow-amber-300/30 dark_">
+
             <h1 class="m-auto p-1 text-base 2xs:text-xl sm-x:text-2xl md:text-3xl lg:text-4xl xs:font-bold font-semibold text-violet-600">
                 Welcome to Ron's Calci.io Page
             </h1>
-            <h2 class="m-auto py-2 px-3 text-center md:text-lg lg:text-xl text-gray-600 bg-cyan-400/60 rounded-full text-base font-semibold">
+            <h2 id="hro-ch" class="m-auto py-2 px-3 text-center md:text-lg lg:text-xl text-gray-600 bg-cyan-400/60 rounded-full text-base font-semibold dark_">
                 Here we provide several types of <br> 
                 calculators & converters 
             </h2>
+
         </div>
 
 
         <!-- dropdown to toggle between calcies -->
         <div class="p-3 relative">
             <div id="drop" class="flex justify-center items-center mx-auto py-2 px-2 w-[80%] sm-x:w-[65%]
-            md:w-[55%] md-2:w-[45%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] bg-white/60 rounded-xl cursor-pointer">
+            md:w-[55%] md-2:w-[45%] lg:w-[40%] xl:w-[35%] 2xl:w-[30%] bg-white/60 rounded-xl cursor-pointer dark_">
                 <h1 class="text-lg font-semibold mx-6">
                     Basic calculator
                 </h1>
@@ -163,14 +173,14 @@
         </div>
 
         <!-- calci in main page -->
-         <div class="mt-5 mb-5">
-            <iframe class="mx-auto my-2 md:my-4 h-[400px] sm:h-[540px] sm:w-[50%] md:w-[45%] md-2:w-[40%] lg:w-[32%] 2xl:h-[520px] 2xl:w-[21%] sm:rounded-sm  p-0 bg-white" src="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\Major Projects\improve-project\calculator\index.html" frameborder="0"></iframe>
+         <div class="mt-5 mb-5 overflow-hidden overflow-y-hidden">
+            <iframe id="calc" class="overflow-hidden z-50 mx-auto my-2 md:my-4 h-[400px] sm:h-[540px] sm:w-[50%] md:w-[45%] md-2:w-[40%] lg:w-[32%] 2xl:h-[520px] 2xl:w-[21%] sm:rounded-sm p-0 bg-white" src="C:\Users\rohan vaybhase\OneDrive\Documents\projects_self\Major Projects\improve-project\calculator\index.html" frameborder="0"></iframe>
          </div>
 
     </main>
 
     <footer>
-        <div class="flex flex-col sm:flex-row sm:p-8 flex-1 w-full p-2 bg-black/80 mt-2 gap-6">
+        <div id="foot" class="dark_ flex flex-col sm:flex-row sm:p-8 flex-1 w-full p-2 bg-black/80 mt-2 gap-6">
             
             <!-- foot-col-1 -->
             <div class="mx-auto my-2">
